@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #FAFAFB;
+  color: #1A1A2E;
+  overflow-x: hidden;
+}
+
+.intro-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #1A1A2E, #E94560);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  z-index: 1000;
+  flex-direction: column;
+  transition: opacity 1s ease;
+}
+
