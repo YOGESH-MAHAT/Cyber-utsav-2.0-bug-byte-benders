@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Siksha Sanjal - Welcome</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="intro-screen" class="intro-screen">
+      <div class="intro-content">
+        <img
+          src="./logo/शिक्षालय1.jpg"
+          alt="Siksha Sanjal Logo"
+          class="intro-logo"
+        />
+        <h1>Welcome to <span>Siksha Sanjal</span></h1>
+        <p>Swipe to match with people who share similar learning interests</p>
+        <button id="continue-btn" class="continue-btn">Continue →</button>
+      </div>
+    </div>
+
+    <script>
+     
+      document.getElementById("continue-btn").addEventListener("click", function () {
+        window.location.href = "index.html";
+      });
+    </script>
+  </body>
+</html>

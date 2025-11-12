@@ -129,8 +129,20 @@ body {
   display: flex;
   gap: 1.5rem; 
 }
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffd700; 
+}
 
 .nav-links li a {
+
   color: white;
   text-decoration: none;
   font-weight: 500;

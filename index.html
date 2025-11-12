@@ -11,50 +11,35 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="intro-screen" class="intro-screen">
-      <div class="intro-content">
-        <img
-          src="./logo/शिक्षालय1.jpg"
-          alt="Siksha Sanjal Logo"
-          class="intro-logo"
-        />
-        <h1>Welcome to <span>Siksha Sanjal</span></h1>
-        <p>Swipe to match with people who share similar learning interests</p>
-        <button id="continue-btn" class="continue-btn">Continue →</button>
-      </div>
-    </div>
+    <header>
+      <nav class="navbar">
+        <div class="nav-left">
+          <img 
+            src="./logo/शिक्षालय1.jpg"
+            alt="Siksha Sanjal Logo"
+            class="nav-logo"
+          />
+          <h1 class="nav-title">Siksha Sanjal</h1>
+        </div>
+        <ul class="nav-links" id="nav-links">
+          <a href="index.html">Home</a>
+          <a href="./explore.html">Explore</a>
+          <a href="#">Match</a>
+          <a href="about.html">About Us</a>
+        </ul>
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+      </nav>
+    </header>
 
-    <div id="main-content" class="hidden">
-      <header>
-        <nav class="navbar">
-          <div class="nav-left">
-            <img 
-              src="./logo/शिक्षालय1.jpg"
-              alt="Siksha Sanjal Logo"
-              class="nav-logo"
-            />
-            <h1 class="nav-title">Siksha Sanjal</h1>
-          </div>
-          <ul class="nav-links" id="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Explore</a></li>
-            <li><a href="#">Match</a></li>
-            <li><a href="#">About</a></li>
-          </ul>
-          <div class="menu-toggle" id="menu-toggle">☰</div>
-        </nav>
-      </header>
+    <section class="hero">
+      <h2>शिक्षा संजाल</h2>
+      <p>ज्ञानको सेतु, सहकार्यको यात्रा</p>
+      <a href="#" class="btn">Find Your Match</a>
+    </section>
 
-      <section class="hero">
-        <h2>शिक्षा संजाल</h2>
-        <p>ज्ञानको सेतु, सहकार्यको यात्रा</p>
-        <a href="#" class="btn">Find Your Match</a>
-      </section>
-
-      <footer>
-        <p>© 2025 Siksha Sanjal | ज्ञानको सेतु, सहकार्यको यात्रा</p>
-      </footer>
-    </div>
+    <footer>
+      <p>© 2025 Siksha Sanjal | ज्ञानको सेतु, सहकार्यको यात्रा</p>
+    </footer>
 
     <script src="script.js"></script>
   </body>
