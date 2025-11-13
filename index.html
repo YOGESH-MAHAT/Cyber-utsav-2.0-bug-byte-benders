@@ -17,15 +17,14 @@
       </div>
       <ul class="nav-links" id="nav-links">
         <a href="index.html">Home</a>
-        <a href="./explore.html">Explore</a>
+        <a href="explore.html">Explore</a>
         <a href="about.html">About Us</a>
-         <a href="./login.html">Login</a>
+        <a href="profile.html">profile</a>
       </ul>
       <div class="menu-toggle" id="menu-toggle">☰</div>
     </nav>
   </header>
 
-  
   <h2 class="highlight">🤝 Collaborate • Learn • Grow Together</h2>
 
   <section class="students-section">
@@ -34,7 +33,7 @@
       <h3>Priya Sharma</h3>
       <p>Grade 12 • St. Xavier’s College</p>
       <p>Hobby: Coding 💻<br>Interest: Artificial Intelligence</p>
-      <button class="collab-btn">Collaborate</button>
+      <button class="collab-btn" onclick="startChat('Priya Sharma')">Collaborate</button>
     </div>
 
     <div class="student-card">
@@ -42,7 +41,7 @@
       <h3>Rohan Thapa</h3>
       <p>Grade 11 • Trinity Int’l College</p>
       <p>Hobby: Drawing 🎨<br>Interest: Web Development</p>
-      <button class="collab-btn">Collaborate</button>
+      <button class="collab-btn" onclick="startChat('Rohan Thapa')">Collaborate</button>
     </div>
 
     <div class="student-card">
@@ -50,9 +49,36 @@
       <h3>Anisha Gurung</h3>
       <p>Grade 12 • Global School of Science</p>
       <p>Hobby: Music 🎶<br>Interest: Ethical Hacking</p>
-      <button class="collab-btn">Collaborate</button>
+      <button class="collab-btn" onclick="startChat('Anisha Gurung')">Collaborate</button>
+    </div>
+    <div class="student-card">
+      <img src="https://i.pravatar.cc/150?img=55" alt="Student">
+      <h3>Arjun Basnet</h3>
+      <p>Grade 11 • SOS Hermann College</p>
+      <p>Hobby: Football ⚽<br>Interest: Networking</p>
+      <button class="collab-btn" onclick="startChat('Arjun Basnet')">Collaborate</button>
+    </div>
+
+    <div class="student-card">
+      <img src="https://i.pravatar.cc/150?img=12" alt="Student">
+      <h3>Reema Karki</h3>
+      <p>Grade 12 • Campion Academy</p>
+      <p>Hobby: Reading 📚<br>Interest: Data Science</p>
+      <button class="collab-btn" onclick="startChat('Reema Karki')">Collaborate</button>
+    </div>
+
+    <div class="student-card">
+      <img src="https://i.pravatar.cc/150?img=22" alt="Student">
+      <h3>Kiran Shrestha</h3>
+      <p>Grade 11 • Chelsea Int’l College</p>
+      <p>Hobby: Gaming 🎮<br>Interest: Cybersecurity</p>
+      <button class="collab-btn" onclick="startChat('Kiran Shrestha')">Collaborate</button>
     </div>
   </section>
+
+  <div class="history-section">
+    <button class="history-btn" onclick="viewHistory()">📜 Request History</button>
+  </div>
 
   <footer>
     © 2025 Siksha Sanjal | ज्ञानको सेतु, सहकार्यको यात्रा

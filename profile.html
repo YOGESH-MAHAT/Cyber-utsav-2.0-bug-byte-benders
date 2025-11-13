@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile | Siksha Sanjal</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #1a1a2e, #e94560);
+        color: white;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .profile-card {
+        width: 420px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 25px;
+        box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+        text-align: center;
+        padding: 2rem;
+        backdrop-filter: blur(25px);
+      }
+
+      .profile-card img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 1rem;
+        border: 3px solid #ffd700;
+        box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
+      }
+
+      .profile-card h2 {
+        font-size: 1.8rem;
+        color: #ffd700;
+      }
+
+      .profile-details {
+        margin-top: 1.5rem;
+        text-align: left;
+      }
+
+      .detail {
+        margin-bottom: 0.8rem;
+        background: rgba(255, 255, 255, 0.15);
+        padding: 0.8rem;
+        border-radius: 10px;
+      }
+
+      .detail strong {
+        color: #ffd700;
+      }
+
+      .btn {
+        margin-top: 1.5rem;
+        display: inline-block;
+        background: linear-gradient(135deg, #e94560, #ffd700);
+        color: white;
+        text-decoration: none;
+        padding: 0.8rem 1.2rem;
+        border-radius: 12px;
+        font-weight: 600;
+        transition: 0.3s;
+      }
+
+      .btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(233, 69, 96, 0.4);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="profile-card">
+      <img src="./logo/शिक्षालय1.jpg" alt="Profile Photo" />
+      <h2 id="profileName">User Name</h2>
+      <div class="profile-details">
+        <div class="detail"><strong>Gender:</strong> <span id="profileGender"></span></div>
+        <div class="detail"><strong>Grade:</strong> <span id="profileGrade"></span></div>
+        <div class="detail"><strong>College:</strong> <span id="profileCollege"></span></div>
+        <div class="detail"><strong>Hobby:</strong> <span id="profileHobby"></span></div>
+        <div class="detail"><strong>Interest:</strong> <span id="profileInterest"></span></div>
+      </div>
+      <a href="login.html" class="btn">Edit Profile</a>
+    </div>
+
+    <script>
+      document.getElementById("profileName").innerText =
+        localStorage.getItem("name") || "Unknown";
+      document.getElementById("profileGender").innerText =
+        localStorage.getItem("gender") || "-";
+      document.getElementById("profileGrade").innerText =
+        localStorage.getItem("grade") || "-";
+      document.getElementById("profileCollege").innerText =
+        localStorage.getItem("college") || "-";
+      document.getElementById("profileHobby").innerText =
+        localStorage.getItem("hobby") || "-";
+      document.getElementById("profileInterest").innerText =
+        localStorage.getItem("interest") || "-";
+    </script>
+  </body>
+  <script>
+  const form = document.getElementById("collabForm");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const gender = document.querySelector('input[name="gender"]:checked')?.value || "";
+    const grade = document.getElementById("grade").value;
+    const college = document.getElementById("college").value;
+    const hobby = document.getElementById("hobby").value;
+    const interest = document.getElementById("interest").value;
+
+    localStorage.setItem("name", name);
+    localStorage.setItem("gender", gender);
+    localStorage.setItem("grade", grade);
+    localStorage.setItem("college", college);
+    localStorage.setItem("hobby", hobby);
+    localStorage.setItem("interest", interest);
+
+    window.location.href = "profile.html";
+  });
+</script>
+
+</html>
