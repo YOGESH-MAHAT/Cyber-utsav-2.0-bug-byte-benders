@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Siksha Sanjal | Collaboration Login</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #1a1a2e, #e94560);
+        color: white;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .login-container {
+        width: 950px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 25px;
+        box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+        display: flex;
+        overflow: hidden;
+        backdrop-filter: blur(25px);
+        z-index: 10;
+      }
+
+      .left-side {
+        flex: 1;
+        background: rgba(255, 255, 255, 0.05);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 2rem;
+        color: white;
+      }
+
+      .left-side img {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 1rem;
+        box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
+      }
+
+      .left-side h1 {
+        font-size: 2rem;
+        font-weight: 700;
+      }
+
+      .left-side p {
+        margin-top: 0.8rem;
+        font-size: 1.1rem;
+        opacity: 0.9;
+      }
+
+      .right-side {
+        flex: 1.3;
+        background: #ffffff;
+        color: #1a1a2e;
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .right-side h2 {
+        text-align: center;
+        color: #e94560;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+      }
+
+      .input-group {
+        margin-bottom: 1rem;
+      }
+
+      label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 0.4rem;
+      }
+
+      input,
+      select {
+        width: 100%;
+        padding: 0.8rem;
+        border: 2px solid #ddd;
+        border-radius: 10px;
+        font-size: 1rem;
+        transition: 0.3s;
+      }
+
+      input:focus,
+      select:focus {
+        border-color: #e94560;
+        outline: none;
+      }
+
+      .gender-group {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .gender-group label {
+        font-weight: 500;
+      }
+
+      .login-btn {
+        width: 100%;
+        background: linear-gradient(135deg, #e94560, #ffd700);
+        border: none;
+        color: white;
+        padding: 0.9rem;
+        border-radius: 12px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .login-btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(233, 69, 96, 0.4);
+      }
+
+      .footer-text {
+        text-align: center;
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        color: #777;
+      }
+
+      /* Animated bubbles background */
+      .bubbles {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: 0;
+      }
+
+      .bubble {
+        position: absolute;
+        bottom: -150px;
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 50%;
+        animation: rise 10s infinite ease-in;
+      }
+
+      .bubble:nth-child(1) {
+        left: 10%;
+        animation-duration: 8s;
+        animation-delay: 1s;
+      }
+      .bubble:nth-child(2) {
+        left: 30%;
+        width: 60px;
+        height: 60px;
+        animation-duration: 10s;
+        animation-delay: 3s;
+      }
+      .bubble:nth-child(3) {
+        left: 50%;
+        animation-duration: 12s;
+        animation-delay: 2s;
+      }
+      .bubble:nth-child(4) {
+        left: 70%;
+        width: 50px;
+        height: 50px;
+        animation-duration: 9s;
+        animation-delay: 4s;
+      }
+      .bubble:nth-child(5) {
+        left: 90%;
+        width: 35px;
+        height: 35px;
+        animation-duration: 11s;
+        animation-delay: 5s;
+      }
+
+      @keyframes rise {
+        0% {
+          transform: translateY(0) scale(1);
+          opacity: 0.6;
+        }
+        100% {
+          transform: translateY(-800px) scale(1.3);
+          opacity: 0;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .login-container {
+          flex-direction: column;
+          width: 90%;
+          height: auto;
+        }
+        .right-side {
+          padding: 2rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="login-container">
+      <!-- Left -->
+      <div class="left-side">
+        <img src="./logo/शिक्षालय1.jpg" alt="Siksha Sanjal Logo" />
+        <h1>Welcome to Siksha Sanjal</h1>
+        <p>ज्ञानको सेतु, सहकार्यको यात्रा</p>
+      </div>
+
+      <!-- Right -->
+      <div class="right-side">
+        <h2>Let's Collaborate!</h2>
+        <form id="collabForm">
+          <div class="input-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Your Name" required />
+          </div>
+
+          <div class="gender-group">
+            <label><input type="radio" name="gender" value="Male" required /> Male</label>
+            <label><input type="radio" name="gender" value="Female" /> Female</label>
+            <label><input type="radio" name="gender" value="Other" /> Other</label>
+          </div>
+
+          <div class="input-group">
+            <label for="grade">Grade</label>
+            <input type="text" id="grade" placeholder="e.g. 11 or 12" required />
+          </div>
+
+          <div class="input-group">
+            <label for="college">College / Institution</label>
+            <input type="text" id="college" placeholder="Your College" required />
+          </div>
+
+          <div class="input-group">
+            <label for="hobby">Hobby</label>
+            <input type="text" id="hobby" placeholder="e.g. Photography, Reading" />
+          </div>
+
+          <div class="input-group">
+            <label for="interest">Field of Interest</label>
+            <input
+              type="text"
+              id="interest"
+              placeholder="e.g. Web Development, AI, Cybersecurity"
+              required
+            />
+          </div>
+
+          <button type="submit" class="login-btn">Find Collaboration Matches</button>
+          <p class="footer-text">© 2025 Siksha Sanjal | ज्ञानको सेतु, सहकार्यको यात्रा</p>
+        </form>
+      </div>
+    </div>
+
+    <div class="bubbles">
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+    </div>
+
+    <script>
+      const form = document.getElementById("collabForm");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const interest = document.getElementById("interest").value;
+
+        alert(`Welcome ${name}! We're finding matches in ${interest} for you...`);
+        window.location.href = "index.html"; // Go to main page
+      });
+    </script>
+  </body>
+</html>
