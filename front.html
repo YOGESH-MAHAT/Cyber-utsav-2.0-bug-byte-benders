@@ -8,103 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: 'Poppins', sans-serif;
-        background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-        color: #fff;
-        height: 100vh;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .intro-screen {
-        text-align: center;
-        animation: fadeIn 1.5s ease;
-      }
-
-      .intro-logo {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        margin-bottom: 1.5rem;
-        box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
-        object-fit: cover;
-      }
-
-      h1 {
-        font-size: 2.2rem;
-        margin-bottom: 0.5rem;
-        color: #ffd700;
-      }
-
-      h1 span {
-        color: #e94560;
-      }
-
-      p {
-        font-size: 1rem;
-        margin-bottom: 2rem;
-        opacity: 0.9;
-      }
-
-      .continue-btn {
-        padding: 0.8rem 2rem;
-        background: linear-gradient(90deg, #e94560, #ffd700);
-        border: none;
-        border-radius: 30px;
-        color: white;
-        font-size: 1rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .continue-btn:hover {
-        transform: scale(1.1);
-        box-shadow: 0 0 20px #ffd700;
-      }
-
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      /* Responsive */
-      @media (max-width: 600px) {
-        h1 {
-          font-size: 1.8rem;
-        }
-
-        .intro-logo {
-          width: 100px;
-          height: 100px;
-        }
-
-        p {
-          font-size: 0.9rem;
-        }
-
-        .continue-btn {
-          padding: 0.7rem 1.5rem;
-          font-size: 0.9rem;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="front.css" />
   </head>
   <body>
     <div id="intro-screen" class="intro-screen">
@@ -116,16 +20,21 @@
         />
         <h1>Welcome to <span>Siksha Sanjal</span></h1>
         <p>Swipe to match with people who share similar learning interests</p>
+        <p id="message" style="margin-top:10px; color:#555;"></p>
         <button id="continue-btn" class="continue-btn">Continue →</button>
       </div>
     </div>
 
     <script>
-      document
-        .getElementById("continue-btn")
-        .addEventListener("click", function () {
-          window.location.href = "index.html";
-        });
+      {
+        
+        setTimeout(function () {
+          window.location.href = "login.html";
+        }, 3000);
+      }
+
+      
+      document.getElementById("continue-btn").addEventListener("click", continueWithDelay);
     </script>
   </body>
 </html>
